@@ -21,10 +21,15 @@ function generateConfetti() {
 }
 
 document.addEventListener('DOMContentLoaded', generateConfetti);
-document.addEventListener('DOMContentLoaded', playAudio);
 
 const audio = document.getElementById('backgroundAudio');
+const clickToPlay = document.getElementById('click-to-play');
 
 function playAudio() {
-    audio.play()
+    audio.play().then(() => {
+        clickToPlay.style.display = 'none';
+    }).catch(error => {
+        console.error('Audio playback failed:', error);
+    });
 }
+document.body.addEventListener('click', playAudio, { once: true });
