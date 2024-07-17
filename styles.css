@@ -7,11 +7,6 @@ body, html {
   justify-content: center;
   align-items: center;
   background-color: #282c34;
-}
-
-body {
-  height: 100vh;
-  margin: 0;
   cursor: pointer;
 }
 
