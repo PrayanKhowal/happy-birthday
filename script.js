@@ -21,3 +21,10 @@ function generateConfetti() {
 }
 
 document.addEventListener('DOMContentLoaded', generateConfetti);
+document.addEventListener('DOMContentLoaded', playAudio);
+
+const audio = document.getElementById('backgroundAudio');
+
+function playAudio() {
+    audio.play()
+}
